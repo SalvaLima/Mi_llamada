@@ -16,9 +16,31 @@ public class Main {
         c = scn.nextDouble();
 
         /**
-         * -b (+-) (b^2 - 4 ac) / 2a
+         * -b (+-) (RAIZ CUADRADA(b^2 - 4 ac)) / 2a
          */
 
 
+        Double resultado = Math.pow(b,2) - (4*a*c);
+            double solucion1;
+            double solucion2;
+
+            /**
+             * una solución
+             */
+
+          if (resultado == 0){
+              solucion1 = ((-b) - 4 * a * c) / (2*a);
+              System.out.println("La respuesta es: "+ solucion1);
+          }
+
+          else if (resultado != 0){
+              solucion1= ((-b) + Math.sqrt(Math.pow(b,2) - (4 * a * c))) / (2*a);
+              solucion2= ((-b) + Math.sqrt(Math.pow(b,2) + (4 * a * c))) / (2*a);
+              System.out.println("Las respuestas son: " + solucion1 + " y: " + solucion2);
+          }
+
+          else{
+              System.out.println("La operación no se puede realizar");
+          }
+        }
     }
-}
