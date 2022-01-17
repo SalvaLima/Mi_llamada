@@ -20,7 +20,8 @@ public class Main {
          */
 
 
-        Double resultado = Math.pow(b,2) - (4*a*c);
+        Double resultado = (Math.pow(b,2)) - (4*a*c);
+        System.out.println(resultado);
             double solucion1;
             double solucion2;
 
@@ -29,13 +30,13 @@ public class Main {
              */
 
           if (resultado == 0){
-              solucion1 = ((-b) - 4 * a * c) / (2*a);
+              solucion1 = (-b) / (2*a);
               System.out.println("La respuesta es: "+ solucion1);
           }
 
           else if (resultado != 0){
-              solucion1= ((-b) + Math.sqrt(Math.pow(b,2) - (4 * a * c))) / (2*a);
-              solucion2= ((-b) + Math.sqrt(Math.pow(b,2) + (4 * a * c))) / (2*a);
+              solucion1= ((-b) + (Math.sqrt(resultado))) / (2*a);
+              solucion2= ((-b) - (Math.sqrt(resultado))) / (2*a);
               System.out.println("Las respuestas son: " + solucion1 + " y: " + solucion2);
           }
 
